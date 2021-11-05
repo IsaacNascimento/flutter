@@ -54,7 +54,9 @@ class LoginScreen extends StatelessWidget {
                   primary: Colors.red,
                 textStyle: TextStyle(fontSize: 14),
               ),
-              onPressed: () {}
+              onPressed: () {
+                Navigator.pushReplacementNamed(context, '/list');
+              },
           ),
           )
         ],

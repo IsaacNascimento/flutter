@@ -5,7 +5,16 @@ class ListScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Pet´s list')
+        title: Text('Pet´s list'),
+        actions: <Widget>[
+         IconButton(
+          icon: const Icon(Icons.logout),
+          tooltip: 'Logout',
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, '/login');
+          },
+        ),
+       ]
       ) ,
       body:
         ListView.builder(
@@ -21,7 +30,9 @@ class ListScreen extends StatelessWidget {
         ),
      floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
-        onPressed: (){},
+        onPressed: (){
+          Navigator.pushNamed(context, '/register');
+        },
      ),
     );
   }

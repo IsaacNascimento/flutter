@@ -13,12 +13,17 @@ class MainWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      //debugShowCheckedModeBanner : false, // Tira o banner debug
+      debugShowCheckedModeBanner : false, // Tira o banner debug
       title: "Home page",
       theme: ThemeData(
         primarySwatch: Colors.red
        ),
-       home: NewResgiter()
+      routes: {
+        '/login': (context) => LoginScreen(),
+        '/list': (context) => ListScreen(),
+        '/register': (context) => NewResgiter(),
+      },
+      initialRoute: '/login',
       );
   }
 }

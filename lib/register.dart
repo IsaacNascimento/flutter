@@ -65,7 +65,9 @@ class NewResgiter extends StatelessWidget {
                horizontal: 75, vertical: 20
                ),
              ),
-              onPressed: () {}
+              onPressed: () {
+                Navigator.pop(context);
+              }
           ),
        ),
 
